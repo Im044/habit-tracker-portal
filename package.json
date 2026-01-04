@@ -1,0 +1,28 @@
+{
+  "name": "habit-tracker-portal",
+  "version": "1.0.0",
+  "description": "A comprehensive habit tracking portal with React, Node.js, MongoDB, authentication, dark mode, and full testing suite",
+  "main": "server/index.js",
+  "scripts": {
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+    "start": "npm run build && npm run server",
+    "dev": "concurrently \"npm run client\" \"npm run server:dev\"",
+    "client": "cd client && npm start",
+    "server": "node server/index.js",
+    "server:dev": "cd server && nodemon index.js",
+    "build": "cd client && npm run build",
+    "test": "npm run test:client && npm run test:server",
+    "test:client": "cd client && npm test -- --coverage",
+    "test:server": "cd server && npm test -- --coverage",
+    "lint": "cd client && npm run lint && cd ../server && npm run lint"
+  },
+  "keywords": ["habit", "tracker", "productivity", "react", "mongodb"],
+  "author": "MOHD MUFFASIL",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

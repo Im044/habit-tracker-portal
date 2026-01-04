@@ -1,74 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Habit Tracker Pro - Full Year 2026</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI'; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
-    .container { max-width: 1800px; margin: 0 auto; background: white; border-radius: 15px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
-    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; text-align: center; }
-    .header h1 { font-size: 2.2em; margin-bottom: 5px; }
-    .main-content { display: grid; grid-template-columns: 250px 1fr; min-height: calc(100vh - 150px); }
-    .sidebar { background: #f8f9fa; padding: 20px; border-right: 1px solid #e0e0e0; overflow-y: auto; }
-    .habit-item { padding: 12px; margin-bottom: 8px; background: white; border-radius: 6px; border-left: 3px solid #667eea; cursor: pointer; transition: all 0.3s; }
-    .habit-item:hover { transform: translateX(5px); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    .habit-item.active { background: #667eea; color: white; }
-    .habit-item .emoji { font-size: 1.3em; margin-right: 8px; }
-    .content { padding: 25px; overflow-y: auto; }
-    .tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid #e0e0e0; }
-    .tab { padding: 12px 20px; cursor: pointer; border: none; background: none; font-size: 1em; font-weight: 500; color: #666; border-bottom: 3px solid transparent; transition: all 0.3s; }
-    .tab.active { color: #667eea; border-bottom-color: #667eea; }
-    .btn { padding: 10px 18px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; transition: all 0.3s; font-size: 0.9em; }
-    .btn-primary { background: #667eea; color: white; }
-    .btn-danger { background: #ef5350; color: white; }
-    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
-    .stat-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 16px; border-radius: 8px; text-align: center; }
-    .stat-value { font-size: 1.8em; font-weight: 700; }
-    .stat-label { font-size: 0.75em; opacity: 0.9; margin-top: 5px; }
-    .year-calendar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 20px; }
-    .month-card { background: #f8f9fa; border-radius: 8px; padding: 12px; border: 2px solid #e0e0e0; }
-    .month-card:hover { border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2); }
-    .month-title { font-size: 1.1em; font-weight: 700; color: #333; margin-bottom: 8px; text-align: center; }
-    .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
-    .day-header { font-size: 0.7em; font-weight: 600; text-align: center; color: #999; padding: 4px 0; }
-    .day-cell { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-size: 0.8em; font-weight: 500; cursor: pointer; border: 1px solid #e0e0e0; transition: all 0.2s; }
-    .day-cell:hover { border-color: #667eea; }
-    .day-completed { background: #4caf50; color: white; font-weight: 700; }
-    .day-partial { background: #fff3cd; color: #856404; }
-    .day-empty { background: #f5f5f5; color: #999; }
-    .day-today { border: 2px solid #667eea; }
-    .weekly-view { width: 100%; border-collapse: collapse; }
-    .weekly-view th { background: #667eea; color: white; padding: 12px; text-align: left; }
-    .weekly-view td { padding: 12px; border-bottom: 1px solid #e0e0e0; }
-    .weekly-view tr:hover { background: #f8f9fa; }
-    .checkbox { width: 20px; height: 20px; cursor: pointer; accent-color: #667eea; }
-    .progress-circle { width: 120px; height: 120px; border-radius: 50%; background: conic-gradient(#667eea 0% 45%, #e0e0e0 45% 100%); display: flex; align-items: center; justify-content: center; margin: 0 auto; }
-    .progress-inner { width: 100px; height: 100px; border-radius: 50%; background: white; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 1.5em; font-weight: 700; color: #667eea; }
-    .controls { display: flex; gap: 10px; margin-bottom: 20px; }
-    .hidden { display: none; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Habit Tracker Pro 2060 - Futuristic Wellness Tracking</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%}
+body{font-family:'Segoe UI',Tahoma,Geneva,sans-serif;background:linear-gradient(135deg,#0a0e27 0%,#1a1f3a 50%,#0f0c29 100%);min-height:100vh;color:#fff;padding:10px;overflow-x:hidden}
+@keyframes glow{0%,100%{text-shadow:0 0 10px rgba(138,43,226,0.5)}50%{text-shadow:0 0 20px rgba(138,43,226,0.9)}}
+@keyframes slideIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 20px rgba(0,212,255,0.3)}50%{box-shadow:0 0 30px rgba(0,212,255,0.6)}}
+@media (max-width:768px){.main-wrapper{grid-template-columns:1fr!important}.sidebar{display:none;position:absolute;z-index:100;width:250px}.sidebar.mobile-open{display:block}.stats-grid{grid-template-columns:1fr!important}.calendar-grid{grid-template-columns:repeat(7,1fr)}.nav-btn{padding:8px 12px;font-size:0.85em}.date-info{font-size:1.1em}.header h1{font-size:1.5em}}
+.container{max-width:1600px;margin:0 auto;display:grid;grid-template-rows:auto auto 1fr;gap:15px;min-height:100vh}
+.header{text-align:center;padding:20px;background:rgba(138,43,226,0.1);backdrop-filter:blur(15px);border-radius:15px;border:1px solid rgba(138,43,226,0.2);animation:glow 3s infinite}
+.header h1{font-size:clamp(1.8em,5vw,2.8em);background:linear-gradient(45deg,#ff006e,#8338ec,#3a86ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:5px;letter-spacing:2px}
+.header p{color:#aaa;font-size:clamp(0.9em,2vw,1.1em)}
+.controls-section{display:flex;flex-wrap:wrap;gap:15px;align-items:center;padding:20px;background:rgba(255,255,255,0.05);backdrop-filter:blur(15px);border-radius:15px;border:1px solid rgba(255,255,255,0.1);animation:slideIn 0.8s ease}
+.date-info{font-size:clamp(1em,3vw,1.4em);font-weight:700;background:linear-gradient(45deg,#ff006e,#3a86ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;flex:1;text-align:center}
+.nav-buttons{display:flex;gap:10px;flex-wrap:wrap}
+.nav-btn{padding:12px 25px;border:none;border-radius:10px;background:linear-gradient(45deg,#ff006e,#8338ec);color:#fff;cursor:pointer;font-weight:600;transition:all 0.3s;border:1px solid rgba(255,255,255,0.2);font-size:clamp(0.85em,2vw,1em)}
+.nav-btn:hover{transform:scale(1.05);box-shadow:0 0 20px rgba(255,0,110,0.5)}
+.nav-btn:active{transform:scale(0.95)}
+.main-wrapper{display:grid;grid-template-columns:250px 1fr 300px;gap:20px;padding:0 10px}
+.sidebar{background:rgba(255,255,255,0.08);backdrop-filter:blur(20px);border-radius:15px;padding:20px;border:1px solid rgba(255,255,255,0.1);height:fit-content;position:sticky;top:20px}
+.sidebar h3{margin-bottom:15px;font-size:1.2em;background:linear-gradient(45deg,#00d4ff,#0099ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.habit-list{display:flex;flex-direction:column;gap:10px}
+.habit-btn{padding:12px 15px;border:none;border-radius:10px;background:rgba(255,255,255,0.05);color:#fff;cursor:pointer;transition:all 0.3s;border-left:3px solid transparent;font-size:0.95em;font-weight:500}
+.habit-btn:hover{background:rgba(255,255,255,0.1);transform:translateX(5px)}
+.habit-btn.active{background:linear-gradient(45deg,#ff006e,#8338ec);border-left-color:#3a86ff;font-weight:600;box-shadow:0 0 15px rgba(255,0,110,0.4)}
+.calendar-container{background:rgba(255,255,255,0.08);backdrop-filter:blur(20px);border-radius:15px;padding:30px;border:1px solid rgba(255,255,255,0.1)}
+.calendar-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;flex-wrap:wrap;gap:15px}
+.calendar-title{font-size:clamp(1.2em,3vw,1.8em);font-weight:700;background:linear-gradient(45deg,#ff006e,#3a86ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-bottom:30px}
+.day-label{text-align:center;font-weight:600;color:#888;font-size:0.9em;padding:10px 0}
+.day-cell{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:10px;border:2px solid rgba(255,255,255,0.1);cursor:pointer;transition:all 0.3s;font-weight:500;position:relative;background:rgba(255,255,255,0.02)}
+.day-cell:hover{border-color:#8338ec;background:rgba(131,56,236,0.2);transform:scale(1.05)}
+.day-cell.completed{background:linear-gradient(135deg,#00d4ff,#0099ff);border-color:#00d4ff;box-shadow:0 0 20px rgba(0,212,255,0.5);animation:pulse 2s infinite;font-weight:700}
+.day-cell.partial{background:linear-gradient(135deg,#ff9500,#ff6b00);border-color:#ff9500;box-shadow:0 0 15px rgba(255,149,0,0.4)}
+.day-cell.inac
+
+</style>
 </head>
 <body>
-  <div class="container"><div class="header"><h1>🔥 Habit Tracker Pro - 2026</h1><div>Full year calendar with interactive tracking</div></div><div class="main-content"><div class="sidebar"><h3 style="color:#333;margin-bottom:15px;">Habits</h3><div class="habit-item active" onclick="selectHabit(0)"><span class="emoji">😴</span> Wake up</div><div class="habit-item" onclick="selectHabit(1)"><span class="emoji">❄️</span> Cold shower</div><div class="habit-item" onclick="selectHabit(2)"><span class="emoji">💧</span> Hydrate</div><div class="habit-item" onclick="selectHabit(3)"><span class="emoji">🤸</span> Stretch</div><div class="habit-item" onclick="selectHabit(4)"><span class="emoji">🍎</span> Lunch</div><div class="habit-item" onclick="selectHabit(5)"><span class="emoji">📖</span> Study</div><div class="habit-item" onclick="selectHabit(6)"><span class="emoji">🏋️</span> Exercise</div><div class="habit-item" onclick="selectHabit(7)"><span class="emoji">💼</span> Work</div></div><div class="content"><div class="controls"><button class="btn btn-primary" onclick="exportData()">📥 Export</button><button class="btn btn-danger" style="margin-left:auto;" onclick="resetAll()">🔄 Reset</button></div><div class="stats"><div class="stat-box"><div class="stat-value">8</div><div class="stat-label">Total Habits</div></div><div class="stat-box"><div class="stat-value" id="yearCompletion">0%</div><div class="stat-label">Year Progress</div></div><div class="stat-box"><div class="stat-value" id="longestStreak">0</div><div class="stat-label">Best Streak</div></div><div class="stat-box"><div class="stat-value" id="daysLogged">0</div><div class="stat-label">Days Logged</div></div></div><div class="tabs"><button class="tab active" onclick="switchTab('year')">📅 Year View</button><button class="tab" onclick="switchTab('weekly')">📊 Weekly</button><button class="tab" onclick="switchTab('details')">🎯 Details</button></div><div id="yearTab" class="tab-content"><div class="year-calendar" id="yearCalendar"></div></div><div id="weeklyTab" class="tab-content hidden"><table class="weekly-view"><tr><th>Habit</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr><tbody id="weeklyBody"></tbody></table></div><div id="detailsTab" class="tab-content hidden" style="text-align:center;"><div class="progress-circle"><div class="progress-inner"><span id="habitPercent">0%</span></div></div><h2 id="habitName" style="margin-top:15px;">Wake up at 6</h2><p id="habitStats" style="color:#666;margin-top:10px;"></p></div></div></div></div>
-  <script>
-    const habits=['Wake up at 6','Cold shower','Hydrate','Stretching','Healthy Lunch','Study','Exercise','Work'];
-    const emojis=['😴','❄️','💧','🤸','🍎','📖','🏋️','💼'];
-    let selected=0;let data={};
-    function init(){const y=2026;for(let m=1;m<=12;m++){for(let d=1;d<=31;d++){const k=`${y}-${m}-${d}`;if(!data[k])data[k]={}; for(let h=0;h<8;h++){if(!data[k][h])data[k][h]=0;}}}
-    localStorage.setItem('habitData',JSON.stringify(data));}
-    function load(){const s=localStorage.getItem('habitData');if(s)data=JSON.parse(s);else init();}
-    function save(){localStorage.setItem('habitData',JSON.stringify(data));}
-    function toggleDay(y,m,d,h){const k=`${y}-${m}-${d}`;if(!data[k])data[k]={};data[k][h]=data[k][h]?0:1;save();updateStats();render();}
-    function renderYear(){const cal=document.getElementById('yearCalendar');cal.innerHTML='';const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];for(let m=1;m<=12;m++){const card=document.createElement('div');card.className='month-card';card.innerHTML=`<div class="month-title">${months[m-1]} 2026</div><div class="calendar-grid">`;const days=['S','M','T','W','T','F','S'];days.forEach(d=>card.innerHTML+=`<div class="day-header">${d}</div>`);const firstDay=new Date(2026,m-1,1).getDay();const daysInMonth=new Date(2026,m,0).getDate();for(let i=0;i<firstDay;i++)card.innerHTML+='<div></div>';for(let d=1;d<=daysInMonth;d++){const k=`2026-${m}-${d}`;let completed=0;for(let h=0;h<8;h++)completed+=data[k][h]||0;let cls='day-empty';if(completed==8)cls='day-completed';else if(completed>0)cls='day-partial';const now=new Date();if(now.getFullYear()==2026&&now.getMonth()==m-1&&now.getDate()==d)cls+=' day-today';card.innerHTML+=`<div class="day-cell ${cls}" onclick="toggleDay(2026,${m},${d},${selected})">${d}</div>`;}card.innerHTML+='</div>';cal.appendChild(card);}}
-    function updateStats(){let total=0,maxStreak=0;for(const k in data){for(let h=0;h<8;h++){total+=data[k][h]||0;}}const pct=Math.round(total/(365*8)*100);document.getElementById('yearCompletion').textContent=pct+'%';document.getElementById('daysLogged').textContent=Object.keys(data).length;}
-    function selectHabit(idx){selected=idx;document.querySelectorAll('.habit-item').forEach((e,i)=>e.classList.toggle('active',i==idx));updateStats();}
-    function switchTab(tab){document.querySelectorAll('.tab-content').forEach(e=>e.classList.add('hidden'));document.querySelectorAll('.tab').forEach(e=>e.classList.remove('active'));document.getElementById(tab+'Tab').classList.remove('hidden');event.target.classList.add('active');}
-    function exportData(){const csv='Habit,Count\n'+habits.map((h,i)=>{let cnt=0;for(const k in data)cnt+=data[k][i]||0;return h+','+cnt;}).join('\n');const blob=new Blob([csv],{type:'text/csv'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='habits.csv';a.click();}
-    function resetAll(){if(confirm('Reset all data?')){init();updateStats();render();alert('✓ Reset!');}}
-    function render(){renderYear();updateStats();}
-    load();render();
-  </script>
-</body>
-</html>
+<div class="container">
+<div class="header">
+<h1>🚀 HABIT TRACKER PRO 2060</h1>
+<p>Next-Gen Wellness & Personal Growth Tracking</p>
+</div>
+<div class="controls-section">
+<div style="flex:1">
+<button class="nav-btn" onclick="prevDate()">⬅ Previous</button>
+</div>
+<div class="date-info" id="dateDisplay">January 4, 2026</div>
+<div style="flex:1;text-align:right">
+<button class="nav-btn" onclick="nextDate()">Next ➡</button>
+</div>
+</div>
+<div class="main-wrapper">
+<div class="sidebar">
+<h3>👥 HABITS</h3>
+<div class="habit-list" id="habitList"></div>
+<button class="nav-btn" style="width:100%;margin-top:15px" onclick="exportData()">📥 Export</button>
+<button class="nav-btn" style="width:100%;margin-top:10px" onclick="resetAllData()">🔄 Reset</button>
+</div>
+<div class="calendar-container">
+<div class="calendar-header">
+<div class="calendar-title" id="monthYear">January 2026</div>
+</div>
+<div class="calendar-grid" id="calendarGrid"></div>
+</div>
+<div class="stats-panel">
+<div class="stats-title">📊 STATS</div>
+<div class="stats-grid">
+<div class="stat-item">
+<div class="stat-label">Daily</div>
+<div class="stat-value" id="dailyComplete">0</div>
+<div class="progress-bar"><div class="progress-fill" id="dailyProgress"></div></div>
+</div>
+<div class="stat-item">
+<div class="stat-label">Weekly</div>
+<div class="stat-value" id="weeklyAvg">0%</div>
+<div class="progress-bar"><div class="progress-fill" id="weeklyProgress"></div></div>
+</div>
+<div class="stat-item">
+<div class="stat-label">Month</div>
+<div class="stat-value" id="monthProgress">0%</div>
+<div class="progress-bar"><div class="progress-fill" id="monthProgressBar"></div></div>
+</div>
+<div class="stat-item">
+<div class="stat-label">Streak</div>
+<div class="stat-value" id="bestStreak">0</div>
+<div class="progress-bar"><div class="progress-fill" id="streakProgress"></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal" id="resetModal">
+<div class="modal-content">
+<h2>⚠️ Reset All Data?</h2>
+<p>All habits data will be cleared. Cannot be undone.</p>
+<div class="btn-group">
+<button class="btn btn-secondary" onclick="closeResetModal()">Cancel</button>
+<button class="btn btn-primary" onclick="confirmReset()">Reset</button>
+</div>
+</div>
+</div>
+<script>const habits=['Wake up at 6','Cold shower','Hydrate','Stretching','Healthy Lunch','Study','Exercise','Work','Reading','Meditation','Walk','Sleep 8h'];const emojis=['😴','❄️','💧','🤸','🍎','📖','🏋️','💼','📚','🧘','🚶','😴'];let currentDate=new Date(2026,0,4);let data={};function init(){for(let m=1;m<=12;m++){for(let d=1;d<=31;d++){const k=`2026-${m}-${d}`;if(!data[k])data[k]={};for(let h=0;h<habits.length;h++){if(data[k][h]===undefined)data[k][h]=0}}localStorage.setItem('habitData',JSON.stringify(data));}}function load(){const s=localStorage.getItem('habitData');data=s?JSON.parse(s):{};if(Object.keys(data).length===0)init();}function save(){localStorage.setItem('habitData',JSON.stringify(data));}function nextDate(){currentDate.setDate(currentDate.getDate()+1);render();}function prevDate(){currentDate.setDate(currentDate.getDate()-1);render();}function getDayKey(d){const m=d.getMonth()+1;const day=d.getDate();return`2026-${m}-${day}`;}function toggleHabit(habitIdx){const k=getDayKey(currentDate);if(!data[k])data[k]={};data[k][habitIdx]=data[k][habitIdx]?0:1;save();render();}function renderHabits(){const list=document.getElementById('habitList');list.innerHTML=habits.map((h,i)=>`<button class="habit-btn" onclick="selectHabit(${i})">${emojis[i]} ${h}</button>`).join('');}function selectHabit(idx){document.querySelectorAll('.habit-btn').forEach((el,i)=>el.classList.toggle('active',i===idx));}function renderCalendar(){const cal=document.getElementById('calendarGrid');const m=currentDate.getMonth();const y=currentDate.getFullYear();const first=new Date(y,m,1).getDay();const daysInMonth=new Date(y,m+1,0).getDate();let html='';['S','M','T','W','T','F','S'].forEach(d=>html+=`<div class="day-label">${d}</div>`);for(let i=0;i<first;i++)html+='<div></div>';for(let d=1;d<=daysInMonth;d++){const date=new Date(y,m,d);const k=`2026-${m+1}-${d}`;let completed=0;for(let h=0;h<habits.length;h++)completed+=data[k]?data[k][h]:0;let cls='day-cell';if(completed===habits.length)cls+=' completed';else if(completed>0)cls+=' partial';if(date.toDateString()===new Date().toDateString())cls+=' today';html+=`<div class="${cls}" onclick="toggleHabit(0)">${d}</div>`;}cal.innerHTML=html;}function updateStats(){const k=getDayKey(currentDate);const dayData=data[k]||{};const completed=Object.values(dayData).filter(v=>v).length;document.getElementById('dailyComplete').textContent=completed;document.getElementById('dailyProgress').style.width=(completed/habits.length*100)+'%';let weekCompleted=0;for(let i=0;i<7;i++){const d=new Date(currentDate);d.setDate(d.getDate()-i);const wk=`2026-${d.getMonth()+1}-${d.getDate()}`;if(data[wk])weekCompleted+=Object.values(data[wk]).filter(v=>v).length;}const weekAvg=Math.round(weekCompleted/(7*habits.length)*100);document.getElementById('weeklyAvg').textContent=weekAvg+'%';document.getElementById('weeklyProgress').style.width=weekAvg+'%';let monthCompleted=0;const monthDays=new Date(2026,currentDate.getMonth()+1,0).getDate();for(let d=1;d<=monthDays;d++){const mk=`2026-${currentDate.getMonth()+1}-${d}`;if(data[mk])monthCompleted+=Object.values(data[mk]).filter(v=>v).length;}const monthPct=Math.round(monthCompleted/(monthDays*habits.length)*100);document.getElementById('monthProgress').textContent=monthPct+'%';document.getElementById('monthProgressBar').style.width=monthPct+'%';let maxStreak=0;let currentStreak=0;for(let d=1;d<=365;d++){const date=new Date(2026,0,d);const sk=`2026-${date.getMonth()+1}-${date.getDate()}`;const dayCompleted=data[sk]?Object.values(data[sk]).filter(v=>v).length:0;if(dayCompleted===habits.length){currentStreak++;maxStreak=Math.max(maxStreak,currentStreak)}else{currentStreak=0}}document.getElementById('bestStreak').textContent=maxStreak;document.getElementById('streakProgress').style.width=Math.min(maxStreak,100)+'%';}function updateDateDisplay(){const opts={weekday:'short',year:'numeric',month:'short',day:'numeric'};document.getElementById('dateDisplay').textContent=currentDate.toLocaleDateString('en-US',opts);const monthNames=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];document.getElementById('monthYear').textContent=monthNames[currentDate.getMonth()]+' '+currentDate.getFullYear();}function exportData(){const csv='Habit,Count\n'+habits.map((h,i)=>{let cnt=0;for(const k in data)cnt+=data[k][i]||0;return h+','+cnt;}).join('\n');const blob=new Blob([csv],{type:'text/csv'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='habits.csv';a.click();}function resetAllData(){document.getElementById('resetModal').classList.add('active');}function closeResetModal(){document.getElementById('resetModal').classList.remove('active');}function confirmReset(){data={};init();save();render();closeResetModal();alert('All data reset!');}function render(){updateDateDisplay();renderHabits();renderCalendar();updateStats();}load();render();</script></body></html>
